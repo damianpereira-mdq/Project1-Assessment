@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Damian\AppData\Local\Temp\testng-eclipse--879109251\testng-customsuite.xml</span>
+                    <span>C:\Users\Damian\AppData\Local\Temp\testng-eclipse--232023274\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,26 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="logInHomeScreen">logInHomeScreen</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="logOutHomeScreen">logOutHomeScreen</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="searchTest1">searchTest1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="searchTest2">searchTest2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="validateHomeScreen">validateHomeScreen</a> <!-- method navigator-link -->
@@ -127,6 +147,42 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="logInHomeScreen">
+                  </a> <!-- logInHomeScreen -->
+                  <span class="method-name">logInHomeScreen</span>
+                  <em>
+(Proceed with Login and validate the result)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logOutHomeScreen">
+                  </a> <!-- logOutHomeScreen -->
+                  <span class="method-name">logOutHomeScreen</span>
+                  <em>
+(Logout from acccount)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchTest1">
+                  </a> <!-- searchTest1 -->
+                  <span class="method-name">searchTest1</span>
+                  <em>
+(Search for 'Xiaomi Redmi 9' and validate result)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchTest2">
+                  </a> <!-- searchTest2 -->
+                  <span class="method-name">searchTest2</span>
+                  <em>
+(Search for 'Logitech c922' and validate result)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="validateHomeScreen">
                   </a> <!-- validateHomeScreen -->
                   <span class="method-name">validateHomeScreen</span>
@@ -139,7 +195,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Damian\AppData\Local\Temp\testng-eclipse--879109251\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Damian\AppData\Local\Temp\testng-eclipse--232023274\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -188,16 +244,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateHomeScreen')
+data.setCell(0, 1, 'searchTest2')
 data.setCell(0, 2, 'TestCases')
-data.setCell(0, 3, 4987);
+data.setCell(0, 3, 7550);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'searchTest1')
+data.setCell(1, 2, 'TestCases')
+data.setCell(1, 3, 7305);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'logOutHomeScreen')
+data.setCell(2, 2, 'TestCases')
+data.setCell(2, 3, 4644);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'logInHomeScreen')
+data.setCell(3, 2, 'TestCases')
+data.setCell(3, 3, 4527);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateHomeScreen')
+data.setCell(4, 2, 'TestCases')
+data.setCell(4, 3, 3592);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,11 +315,27 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">validateHomeScreen</span>
-                <span class="method-start">1642 ms</span>
+                <span class="method-start">1554 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">logInHomeScreen</span>
+                <span class="method-start">5151 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">logOutHomeScreen</span>
+                <span class="method-start">9679 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchTest1</span>
+                <span class="method-start">14325 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchTest2</span>
+                <span class="method-start">21632 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6635 ms</span>
+                <span class="method-start">29185 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

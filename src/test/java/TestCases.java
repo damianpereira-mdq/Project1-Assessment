@@ -1,4 +1,6 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,8 +14,13 @@ public class TestCases extends SetupConnection {
 		
 		String expectedTitle = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
 		String actualTitle = driver.getTitle();
-		Assert.assertEquals(expectedTitle, actualTitle);
+		Assert.assertEquals(expectedTitle, actualTitle);		
 		
+	}
+	
+	@Test(priority = 1, description = "Proceed with Login and validate the result")
+	public void logInHomeScreen() throws InterruptedException {
+
 		//SIMULATE SUCESSFUL LOGIN TO CONTINUE TESTS
 		driver.findElement(By.id("nav-link-accountList-nav-line-1")).click();
 		driver.findElement(By.id("ap_email")).sendKeys("damianpereira.mdq@gmail.com");
@@ -21,7 +28,65 @@ public class TestCases extends SetupConnection {
 		driver.findElement(By.id("ap_password")).sendKeys("simplilearntest");
 		driver.findElement(By.id("signInSubmit")).click();
 		
+		Thread.sleep(2000);
+		
+		String validation = driver.findElement(By.id("nav-link-accountList-nav-line-1")).getText();
+		Assert.assertEquals(validation, "Hello, Damian");
+		
 	}
+	
+	@Test(priority = 1, description = "Logout from acccount")
+	public void logOutHomeScreen() throws InterruptedException {
+
+		//SIMULATE SUCESSFUL LOGIN TO CONTINUE TESTS
+		 WebElement element = driver.findElement(By.id("nav-link-accountList-nav-line-1"));
+	     Actions builder = new Actions(driver);
+	     builder.moveToElement(element).perform();
+	     
+	     driver.findElement(By.cssSelector("#nav-item-signout > .nav-text")).click();
+	     driver.findElement(By.cssSelector(".a-icon-logo")).click();
+		
+		Thread.sleep(2000);
+		
+		String validation = driver.findElement(By.id("nav-link-accountList-nav-line-1")).getText();
+		Assert.assertEquals(validation, "Hello, Sign in");
+		
+	}
+	
+	@Test(priority = 2, description = "Search for 'Xiaomi Redmi 9' and validate result")
+	public void searchTest1() throws InterruptedException {
+
+		//SIMULATE SUCESSFUL LOGIN TO CONTINUE TESTS
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("xiaomi redmi 9");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		Thread.sleep(2000);
+		
+		String validation = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[1]/div/span/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")).getText();
+		Assert.assertEquals(validation, "Xiaomi Redmi 9 Unlocked RAM Dual Sim 32GB 3GB RAM 6.53\" International Global Version (Carbon Grey)");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("nav-logo-sprites")).click();
+	}
+	
+	@Test(priority = 2, description = "Search for 'Logitech c922' and validate result")
+	public void searchTest2() throws InterruptedException {
+
+		//SIMULATE SUCESSFUL LOGIN TO CONTINUE TESTS
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Logitech c922");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		Thread.sleep(2000);
+		
+		String validation = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[1]/div/span/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")).getText();
+		Assert.assertEquals(validation, "Logitech C922x Pro Stream Webcam – Full 1080p HD Camera");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("nav-logo-sprites")).click();
+	}
+	
 	
 	@Test(enabled = false, priority = 1, description = "Test LOGIN with wrong email.")
 	public void loginTestWrongEmail() {

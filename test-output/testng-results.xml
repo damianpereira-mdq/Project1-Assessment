@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="9" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-15T22:37:01 ART" name="Default suite" finished-at="2021-02-15T22:37:12 ART" duration-ms="10712">
+  <suite started-at="2021-02-16T02:12:27 ART" name="Default suite" finished-at="2021-02-16T02:13:00 ART" duration-ms="33256">
     <groups>
     </groups>
-    <test started-at="2021-02-15T22:37:01 ART" name="Default test" finished-at="2021-02-15T22:37:12 ART" duration-ms="10712">
+    <test started-at="2021-02-16T02:12:27 ART" name="Default test" finished-at="2021-02-16T02:13:00 ART" duration-ms="33256">
       <class name="TestCases">
-        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:TestCases@124c278f]" started-at="2021-02-15T22:37:01 ART" name="setUpDriver" finished-at="2021-02-15T22:37:03 ART" duration-ms="1624" status="PASS">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:TestCases@47542153]" started-at="2021-02-16T02:12:27 ART" name="setUpDriver" finished-at="2021-02-16T02:12:29 ART" duration-ms="1537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method signature="validateHomeScreen()[pri:0, instance:TestCases@124c278f]" started-at="2021-02-15T22:37:03 ART" name="validateHomeScreen" description="Open Chrome web browser and navigate to https://www.amazon.com/" finished-at="2021-02-15T22:37:08 ART" duration-ms="4987" status="PASS">
+        <test-method signature="validateHomeScreen()[pri:0, instance:TestCases@47542153]" started-at="2021-02-16T02:12:29 ART" name="validateHomeScreen" description="Open Chrome web browser and navigate to https://www.amazon.com/" finished-at="2021-02-16T02:12:32 ART" duration-ms="3592" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateHomeScreen -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases@124c278f]" started-at="2021-02-15T22:37:08 ART" name="tearDown" finished-at="2021-02-15T22:37:12 ART" duration-ms="4072" status="PASS">
+        <test-method signature="logInHomeScreen()[pri:1, instance:TestCases@47542153]" started-at="2021-02-16T02:12:32 ART" name="logInHomeScreen" description="Proceed with Login and validate the result" finished-at="2021-02-16T02:12:37 ART" duration-ms="4527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInHomeScreen -->
+        <test-method signature="logOutHomeScreen()[pri:1, instance:TestCases@47542153]" started-at="2021-02-16T02:12:37 ART" name="logOutHomeScreen" description="Logout from acccount" finished-at="2021-02-16T02:12:42 ART" duration-ms="4644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOutHomeScreen -->
+        <test-method signature="searchTest1()[pri:2, instance:TestCases@47542153]" started-at="2021-02-16T02:12:42 ART" name="searchTest1" description="Search for &#039;Xiaomi Redmi 9&#039; and validate result" finished-at="2021-02-16T02:12:49 ART" duration-ms="7305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest1 -->
+        <test-method signature="searchTest2()[pri:2, instance:TestCases@47542153]" started-at="2021-02-16T02:12:49 ART" name="searchTest2" description="Search for &#039;Logitech c922&#039; and validate result" finished-at="2021-02-16T02:12:56 ART" duration-ms="7550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases@47542153]" started-at="2021-02-16T02:12:56 ART" name="tearDown" finished-at="2021-02-16T02:13:00 ART" duration-ms="4067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
