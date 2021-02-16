@@ -7,7 +7,7 @@
         <methods>
           <include name="setUpDriver"/>
           <include name="tearDown"/>
-          <include name="test2"/>
+          <include name="validateHomeScreen"/>
         </methods>
       </class> <!-- TestCases -->
     </classes>
